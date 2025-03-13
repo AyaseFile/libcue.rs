@@ -8,6 +8,8 @@ fn main() {
         .build();
     println!(
         "cargo:rustc-link-search=native={}",
-        dst.join("lib").display()
+        dst.join("build").display()
     );
+
+    println!("cargo:rustc-link-lib=static=cue");
 }
